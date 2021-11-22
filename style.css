@@ -2,17 +2,20 @@
 {
     background:rgba(243, 82, 123, 0.527);
 }
-h1 {
+h1 
+{
     color : rgb(224, 210, 205);
     text-align:center;
 }
 
-p {
+p
+{
     color: black;
     text-align: left;
     text-size-adjust: 12;
 }
-h2 {
+h2 
+{
     color:brown;
     text-align:center;
 }
