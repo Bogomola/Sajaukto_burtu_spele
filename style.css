@@ -1,0 +1,20 @@
+
+/* CSS stilu definīcija */
+
+body {
+    color       : rgb(130, 95, 185);
+    font-family : "Time New Roman";
+    bgcolor     : "EEEEEE";
+    font-size   : 14 pt
+  }
+
+h1 {
+  color : rgb(237, 237, 245)
+}
+
+h2 {
+  color : black
+}
+
+h3 {
+  color : green
