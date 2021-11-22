@@ -2,6 +2,10 @@
 {
     background:rgba(243, 82, 123, 0.527);
 }
+.header
+{
+    background-clip: inherit;
+}
 h1 
 {
     text-align:center;
