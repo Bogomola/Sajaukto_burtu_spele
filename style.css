@@ -12,20 +12,33 @@ h1
     color : rgb(7, 2, 0);
     
 }
+ul 
+{text-align:center}
 
 p
 {
     color: black;
     text-align: center;
-    text-size-adjust: 14;
+    text-size-adjust: 20;
 }
 .spele
 {
     width:350px;
-    background:black;
+    height: 350px;
+    background:rgb(16, 111, 128);
+    text-align: center;
 }
 h2 
 {
     color:brown;
     text-align:center;
+    
+}
+.block
+{
+    display:inline-block;
+    background:burlywood;
+    width: 100px;
+    height:100px;
+    border:1px solid black;
 }
