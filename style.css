@@ -1,7 +1,11 @@
-.papper
-{
-    background:rgba(243, 82, 123, 0.527);
+.top{
+    background:#84a59d;
 }
+body{
+    background-color:#f28482;
+}
+
+
 .header
 {
     background-clip: inherit;
@@ -10,6 +14,7 @@ h1
 {
     text-align:center;
     color : rgb(7, 2, 0);
+    font-family:  "Book Antiqua"
     
 }
 ul 
@@ -20,11 +25,11 @@ p
     color: black;
     text-align: center;
     text-size-adjust: 20;
+    font-family:  "Book Antiqua"
 }
 .spele
 {
-    width:350px;
-    height: 350px;
+    
     background:rgb(16, 111, 128);
     text-align: center;
 }
