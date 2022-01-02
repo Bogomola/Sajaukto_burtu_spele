@@ -1,19 +1,43 @@
-.top{
-    background:#84a59d;
+
+.navigacija{
+    background:#3d405b;
+    width:100%;
+   
+    padding:;
+}
+.navigacija ul {
+list-style-type:none;
+font-size:18px;
+font-weight:bold;
+font-family: "Book Antiqua";
+text-align:left;
+}
+li a{
+    text-decoration:none;
+    color:#bcbf;
+}
+li a:hover{
+    background-color: #bcbf8a;
+    color: #464c4f;
+
+}
+.navigacija p{
+    color:black;
 }
 body{
     background-color:#f28482;
 }
-
-
-.header
-{
-    background-clip: inherit;
+.noteikumi{
+    margin:20px;
+   
+    border:3px solid #464c4f;
 }
+
+
 h1 
 {
     text-align:center;
-    color : rgb(7, 2, 0);
+    color : brown;
     font-family:  "Book Antiqua"
     
 }
@@ -37,7 +61,7 @@ h2
 {
     color:brown;
     text-align:center;
-    
+    font-family:  "Book Antiqua"
 }
 .block
 {
