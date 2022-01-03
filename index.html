@@ -37,33 +37,29 @@
         </div>
         <!--Spēles bloks-->
         <div class="content">
+            <h1>Uzmini vārdu</h1>
             <h2>Izmantojot šo spēli tu uzlabosi savas lasītprasmes!</h2>
+            
+            <div class="punkti"><label id='punkti'><b>Punkti:</b></label></div>
+            <div class="laiks"><label id='punkti'><b>Laiks:30 s</b></label></div>
  
     </div>
             <div class="spele" id="spele">
                 
+      
                 
                 
             </br>
-            <h3>Izvēlies līmeni</h3>
-            <button title="viegls" onclick="Limenis1()">viegls</button>
-            <button title="normals" onclick="Limenis2()">normals</button>
-            <button title="smags" onclick="Limenis3()">smags</button>
-            <div id="SaktSpeli" style="display: none">
+            
                 <div class="speletajs">
-                
-                    <div class="punkti"><label id='punkti'>Punkti:</label></div>
-                   <div class="laiks"><label id='punkti'>Laiks:30 s</label></div>
                    
                </div>
-                <h1>Uzmini vārdu</h1>
+                
+                <input type="text" class="hidden">
                 <button onclick="saktSpeli()"  onclick="setTimeout(laiks,300)">Sākt spēli</button>
-                <div id="spele" style="display: none"></div>
-                <div>
-                    <button onclick="enterGuess()">Enter Guess</button>
-                </div>
+                
             </div>
-           
+            
 
         <div id="mainGame" style="display: none">
 
