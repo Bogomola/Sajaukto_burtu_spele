@@ -36,8 +36,9 @@ h1
 {
     text-align:center;
     color : brown;
-    font-family:  "Book Antiqua"
-    
+    font-family: 'Pushster';
+    letter-spacing:10px;
+
 }
 ul 
 {text-align:center}
@@ -51,23 +52,38 @@ p
 }
 .spele
 {
+    padding:20px 0;
+    height:400px;
     border:3px solid #464c4f;
     background:#3d405b;
     text-align: center;
-    padding:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    box-shadow:0 8px 6px -6px black;
    
 }
 .speletajs{
     text-align:center;
     padding:10px;
 }
-
+input {
+    width:40%;
+    padding:15px 0;
+    text-align:center;
+    border-radius:25px;
+    background-color:rgb(139, 165, 212);
+    color:black;
+    margin:20px 0;
+    font-size:20px;
+}
 
 h2 
 {
     color:brown;
     text-align:center;
-    font-family:  "Book Antiqua"
+    font-family: 'Pushster';
 }
 .block
 {
