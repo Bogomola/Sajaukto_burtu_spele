@@ -1,9 +1,7 @@
 
 .navigacija{
     background:#3d405b;
-    width:100%;
-   
-    padding:;
+     padding:20px;
 }
 .navigacija ul {
 list-style-type:none;
@@ -53,10 +51,18 @@ p
 }
 .spele
 {
-    
-    background:rgb(16, 111, 128);
+    border:3px solid #464c4f;
+    background:#3d405b;
     text-align: center;
+    padding:10px;
+   
 }
+.speletajs{
+    text-align:center;
+    padding:10px;
+}
+
+
 h2 
 {
     color:brown;
@@ -70,4 +76,14 @@ h2
     width: 100px;
     height:100px;
     border:1px solid black;
+}
+.rezultati{
+    margin:20px;
+   
+    border:3px solid #464c4f;
+}
+.veidotaji{
+    margin:20px;
+   
+    border:3px solid #464c4f;
 }
