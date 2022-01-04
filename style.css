@@ -2,32 +2,43 @@
 .navigacija{
     background:#3d405b;
      padding:20px;
+    border-radius:25px;
 }
 .navigacija ul {
 list-style-type:none;
 font-size:18px;
 font-weight:bold;
 font-family: "Book Antiqua";
-text-align:left;
+text-align:center;
+padding:10px
+
+}
+.navigacija li{
+    float: left;
+    padding:20px;
+    text-align:center;
+
 }
 li a{
     text-decoration:none;
     color:#bcbf;
 }
 li a:hover{
-    background-color: #bcbf8a;
-    color: #464c4f;
+    background-color: #941c4e;
+    color: #bbcbd3;
+    padding:5px;
 
 }
 .navigacija p{
     color:black;
+    
 }
 body{
     background-color:#f28482;
 }
 .noteikumi{
     margin:20px;
-   
+    border-radius:25px;
     border:3px solid #464c4f;
 }
 
@@ -38,6 +49,7 @@ h1
     color : brown;
     font-family: 'Pushster';
     letter-spacing:10px;
+    text-shadow: 0 1px 0 #f3f3f3;
 
 }
 ul 
@@ -62,11 +74,13 @@ p
     align-items:center;
     flex-direction:column;
     box-shadow:0 8px 6px -6px black;
+    border-radius:25px;
    
 }
 .speletajs{
     text-align:center;
     padding:10px;
+    
 }
 input {
     width:40%;
@@ -85,7 +99,10 @@ button{
     text-decoration:none;
     margin-top:10px;
     color:brown;
-    font-family: 'Pushster'
+    font-family: 'Pushster';
+    border-radius:10px;
+    
+    
 }
 h2 
 {
@@ -103,11 +120,12 @@ h2
 }
 .rezultati{
     margin:20px;
-   
+    border-radius:25px;
+
     border:3px solid #464c4f;
 }
 .veidotaji{
     margin:20px;
-   
+    border-radius:25px;
     border:3px solid #464c4f;
 }
