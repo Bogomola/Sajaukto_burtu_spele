@@ -9,7 +9,7 @@ let randomVards="";
 let rezultats=0;
 let i=0;
 //vārdu massīvs
-let vardi=['ZIEMA','SALAVECIS','ZIEMASSVETKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
+let vardi=['ZIEMA','SALAVECIS','ZIEMASSVĒTKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
 let l=vardi.length;
 
 //vārda izjaukšana
@@ -40,6 +40,7 @@ poga.addEventListener('click',function(){
     else if(i == l){
         zinojums.innerHTML=`Rezultāts:${rezultats}`
         poga.innerHTML="Spēlēt vēlreiz";
+        
         guess.value="";
         play=false;
         rezultats=0;
@@ -59,7 +60,10 @@ poga.addEventListener('click',function(){
         else{
             zinojums.innerHTML=`Tu pazaudēji 5 punktus! Pamēģini vēlreiz: ${randomVards}`;
             rezultats=rezultats-5;
+    
         }
+        punkti.innerHTML=`Punkti: ${rezultats}`;
+        laiks.innerHTML="Laiks:"; 
     }
 })
 
