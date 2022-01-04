@@ -3,6 +3,7 @@
     background:#3d405b;
      padding:20px;
     border-radius:25px;
+    box-shadow:0 8px 6px -6px black;
 }
 .navigacija ul {
 list-style-type:none;
@@ -40,6 +41,7 @@ body{
     margin:20px;
     border-radius:25px;
     border:3px solid #464c4f;
+    box-shadow:0 8px 6px -6px black;
 }
 
 
@@ -60,12 +62,12 @@ p
     color: black;
     text-align: center;
     text-size-adjust: 20;
-    font-family:  "Book Antiqua"
+    font-family:  "Book Antiqua";
 }
 .spele
 {
     padding:20px 0;
-    height:400px;
+    height:600px;
     border:3px solid #464c4f;
     background:#3d405b;
     text-align: center;
@@ -83,7 +85,6 @@ p
     
 }
 input {
-    width:40%;
     padding:15px 0;
     text-align:center;
     border-radius:25px;
@@ -104,6 +105,24 @@ button{
     
     
 }
+.punkti{
+    font-size:20px;
+    font-family: 'Pushster';
+    color:brown;
+    padding:10px;
+}
+.zinojums{
+    font-size:30px;
+    font-family: "Book Antiqua";
+    color:rgb(7, 7, 7);
+}
+.laiks{
+    font-size:20px;
+    font-family: 'Pushster';
+    color:brown;
+    
+
+}
 h2 
 {
     color:brown;
@@ -121,6 +140,7 @@ h2
 .rezultati{
     margin:20px;
     border-radius:25px;
+    box-shadow:0 8px 6px -6px black;
 
     border:3px solid #464c4f;
 }
@@ -128,4 +148,5 @@ h2
     margin:20px;
     border-radius:25px;
     border:3px solid #464c4f;
+    box-shadow:0 8px 6px -6px black;
 }
