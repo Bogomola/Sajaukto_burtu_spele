@@ -8,6 +8,10 @@ let jaunsVards="";
 let randomVards="";
 let rezultats=0;
 let i=0;
+let laiks=30;
+let d1=0;
+let n;
+let spele;
 //vārdu massīvs
 let vardi=['ZIEMA','SALAVECIS','ZIEMASSVĒTKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
 let l=vardi.length;
@@ -35,7 +39,7 @@ poga.addEventListener('click',function(){
         //izveidot vārdu
         jaunsVards=vardi[i];
         randomVards=scrambleWord(jaunsVards.split("")).join("");
-        zinojums.innerHTML = `Uzminēt vārdu ${randomVards}`;
+        zinojums.innerHTML = ` ${randomVards}`;
     }
     else if(i == l){
         zinojums.innerHTML=`Rezultāts:${rezultats}`
@@ -65,7 +69,12 @@ poga.addEventListener('click',function(){
         punkti.innerHTML=`Punkti: ${rezultats}`;
         laiks.innerHTML="Laiks:"; 
     }
+    
 })
-
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
 
 
