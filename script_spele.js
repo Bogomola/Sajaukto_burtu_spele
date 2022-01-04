@@ -1,16 +1,16 @@
 
-const message=document.querySelector('.message');
+const zinojums=document.querySelector('.zinojums');
 const guess=document.querySelector('input');
 const poga=document.querySelector('.poga');
 const no=document.querySelector('.no')
 let play=false;
-let newWord="";
-let randomWord="";
-let score=0;
+let jaunsVards="";
+let randomVards="";
+let rezultats=0;
 let i=0;
 //vārdu massīvs
-let Words=['ZIEMA','SALAVECIS','ZIEMASSVETKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
-let l=Words.length;
+let vardi=['ZIEMA','SALAVECIS','ZIEMASSVETKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
+let l=vardi.length;
 
 //vārda izjaukšana
 const scrambleWord =(arr) =>{
@@ -29,37 +29,36 @@ poga.addEventListener('click',function(){
     if(!play & i<l){
         no.innerHTML=`${i+1}/10`
         play=true;
-        //when poga clicked change innerhtml to guess
-        poga.innerHTML="Guess";
-        //show hidden class
+        //poga pamainās uz "Uzminēt"
+        poga.innerHTML="Minēt";
         guess.classList.toggle('hidden');
-        //create words
-        newWord=Words[i];
-        randomWord=scrambleWord(newWord.split("")).join("");
-        message.innerHTML = `Guess the word ${randomWord}`;
+        //izveidot vārdu
+        jaunsVards=vardi[i];
+        randomVards=scrambleWord(jaunsVards.split("")).join("");
+        zinojums.innerHTML = `Uzminēt vārdu ${randomVards}`;
     }
     else if(i == l){
-        message.innerHTML=`Rezultāts:${score}`
+        zinojums.innerHTML=`Rezultāts:${rezultats}`
         poga.innerHTML="Spēlēt vēlreiz";
         guess.value="";
         play=false;
-        score=0;
+        rezultats=0;
         i=0;
     }
     else{
         let tempWord=guess.value;
-        if(newWord === tempWord){
+        if(jaunsVards === tempWord){
             play=false;
-            score=score+10;
-            message.innerHTML=`Awesome!!! It is correct.`
-            poga.innerHTML="Next";
+            rezultats=rezultats+10;
+            zinojums.innerHTML=`Pareizi!Tev ir ${rezultats} punkti`
+            poga.innerHTML="Nākošais vārds";
             guess.classList.toggle('hidden');
             guess.value="";
             i++;
         }
         else{
-            message.innerHTML=`Try Again ${randomWord}`;
-            score=score-5;
+            zinojums.innerHTML=`Tu pazaudēji 5 punktus! Pamēģini vēlreiz: ${randomVards}`;
+            rezultats=rezultats-5;
         }
     }
 })
