@@ -12,6 +12,7 @@ let laiks=30;
 let d1=0;
 let n;
 let spele;
+
 //vārdu massīvs
 let vardi=['ZIEMA','SALAVECIS','ZIEMASSVĒTKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
 let l=vardi.length;
@@ -29,27 +30,11 @@ const scrambleWord =(arr) =>{
 }
 
 //kad poga piespiesta, sākas spēle
-poga.addEventListener('click',
-var timeLeft = 60;
-var elem = document.getElementById('some_div');
-var timerId = setInterval(countdown, 1000);
-
-function countdown() {
-    if (timeLeft == -1) {
-      clearTimeout(timerId);
-      doSomething();
-    } else {
-      elem.innerHTML = timeLeft + ' s';
-      timeLeft--;
-    }
-    laiks.innerHTML="Laiks:"+timeLeft;}
-
-
-
-function(){
+poga.addEventListener('click',function(){
     if(!play & i<l){
         no.innerHTML=`${i+1}/10`
         play=true;
+        
         //poga pamainās uz "Minēt"
         poga.innerHTML="Minēt";
         guess.classList.toggle('hidden');
@@ -78,6 +63,7 @@ function(){
             guess.classList.toggle('hidden');
             guess.value="";
             i++;
+            timeleft == 0;
         }
         else{
             zinojums.innerHTML=`Tu pazaudēji 5 punktus! Pamēģini vēlreiz: ${randomVards}`;
@@ -89,3 +75,30 @@ function(){
     }
     
 })
+
+
+        var elem = document.getElementById('spele').addEventListener("click", function(){
+            var timeleft = 15;
+         var downloadTimer = setInterval(function function1(){
+            document.getElementById("countdown").innerHTML = timeleft + 
+            "&nbsp"+"sekundes";
+        
+            timeleft -= 1;
+            if(timeleft <= 0){
+                clearInterval(downloadTimer);
+                document.getElementById("countdown").innerHTML = "Laiks beidzas!";
+              
+                
+                
+            }
+            }, 1000);
+            
+
+            
+        })
+        if (laiks=== 0 && rezultats>0){
+            
+            let speletajs=prompt("Tu ieguvi "+rezultats+" punktus! Ja vēlies saglabāt rezultātu, ievadi savu vārdu!");
+            if(speletajs!==null)rezultati(speletajs, rezultats);
+            punkti=0;
+            document.getElementById("punkti").innerHTML="punkti = 0";}
