@@ -29,17 +29,35 @@ const scrambleWord =(arr) =>{
 }
 
 //kad poga piespiesta, sākas spēle
-poga.addEventListener('click',function(){
+poga.addEventListener('click',
+var timeLeft = 60;
+var elem = document.getElementById('some_div');
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+      clearTimeout(timerId);
+      doSomething();
+    } else {
+      elem.innerHTML = timeLeft + ' s';
+      timeLeft--;
+    }
+    laiks.innerHTML="Laiks:"+timeLeft;}
+
+
+
+function(){
     if(!play & i<l){
         no.innerHTML=`${i+1}/10`
         play=true;
-        //poga pamainās uz "Uzminēt"
+        //poga pamainās uz "Minēt"
         poga.innerHTML="Minēt";
         guess.classList.toggle('hidden');
         //izveidot vārdu
         jaunsVards=vardi[i];
         randomVards=scrambleWord(jaunsVards.split("")).join("");
         zinojums.innerHTML = ` ${randomVards}`;
+
     }
     else if(i == l){
         zinojums.innerHTML=`Rezultāts:${rezultats}`
@@ -67,14 +85,7 @@ poga.addEventListener('click',function(){
     
         }
         punkti.innerHTML=`Punkti: ${rezultats}`;
-        laiks.innerHTML="Laiks:"; 
+         
     }
     
 })
-let myVar = setInterval(myTimer ,1000);
-function myTimer() {
-  const d = new Date();
-document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-}
-
-
