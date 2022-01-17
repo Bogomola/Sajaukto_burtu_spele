@@ -8,10 +8,37 @@ let jaunsVards="";
 let randomVards="";
 let rezultats=0;
 let i=0;
-let laiks=30;
+let laiks=120;
 let d1=0;
 let n;
 let spele;
+
+var elem = document.getElementById('spele').addEventListener("click", function(){
+    
+ var downloadTimer = setInterval(function function1(){
+    document.getElementById("countdown").innerHTML = laiks + 
+    "&nbsp"+"sekundes";
+    laiks -= 1;
+    if(laiks <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = "Laiks beidzas!";
+        i == l
+        zinojums.innerHTML=`Laiks beidzās! Tavs rezultāts ir:${rezultats} punkti`
+        poga.innerHTML="Spēlēt vēlreiz";
+        guess.value="";
+        play=false;
+        i=0;
+        let speletajs=prompt("Tu ieguvi "+rezultats+" punktus! Ja vēlies saglabāt rezultātu, ievadi savu vārdu!");
+        
+
+    
+    }
+    }, 1000);
+    
+    
+
+    
+})
 
 //vārdu massīvs
 let vardi=['ZIEMA','SALAVECIS','ZIEMASSVĒTKI','EGLE','DĀVANAS','PIPARKŪKAS','ZVAIGZNE','LAMPIŅAS','SNIEGAVĪRS','RAGAVIŅAS'];
@@ -47,7 +74,6 @@ poga.addEventListener('click',function(){
     else if(i == l){
         zinojums.innerHTML=`Rezultāts:${rezultats}`
         poga.innerHTML="Spēlēt vēlreiz";
-        
         guess.value="";
         play=false;
         rezultats=0;
@@ -57,13 +83,15 @@ poga.addEventListener('click',function(){
         let tempWord=guess.value;
         if(jaunsVards === tempWord){
             play=false;
+            timeLeft=0;
             rezultats=rezultats+10;
             zinojums.innerHTML=`Pareizi!Tev ir ${rezultats} punkti`
             poga.innerHTML="Nākošais vārds";
             guess.classList.toggle('hidden');
             guess.value="";
             i++;
-            timeleft == 0;
+            
+            
         }
         else{
             zinojums.innerHTML=`Tu pazaudēji 5 punktus! Pamēģini vēlreiz: ${randomVards}`;
@@ -76,29 +104,3 @@ poga.addEventListener('click',function(){
     
 })
 
-
-        var elem = document.getElementById('spele').addEventListener("click", function(){
-            var timeleft = 15;
-         var downloadTimer = setInterval(function function1(){
-            document.getElementById("countdown").innerHTML = timeleft + 
-            "&nbsp"+"sekundes";
-        
-            timeleft -= 1;
-            if(timeleft <= 0){
-                clearInterval(downloadTimer);
-                document.getElementById("countdown").innerHTML = "Laiks beidzas!";
-              
-                
-                
-            }
-            }, 1000);
-            
-
-            
-        })
-        if (laiks=== 0 && rezultats>0){
-            
-            let speletajs=prompt("Tu ieguvi "+rezultats+" punktus! Ja vēlies saglabāt rezultātu, ievadi savu vārdu!");
-            if(speletajs!==null)rezultati(speletajs, rezultats);
-            punkti=0;
-            document.getElementById("punkti").innerHTML="punkti = 0";}
