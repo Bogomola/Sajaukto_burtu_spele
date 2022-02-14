@@ -33,10 +33,10 @@
         <!--Noteikumu bloks-->
         <div class='noteikumi' id="noteikumi">
            <h2>Noteikumi</h2>
-           <p>Spēlē ir sajaukti vairāki vārdi.</p>
-           <p>Par pareizi atminētu vārdu, tu saņem +10 punkti, ja kļūdies zaude -5 punktus.</p>
+           <p>Spēlē ir sajaukti vairāki vārdi. Tavs uzdevums ir uzminēt sajaukto vārdu, ierakstot lodziņā.</p>
+           <p>Par garāku vārdu tu saņem vairāk punktu(katrs vārda burts x10), ja kļūdies zaude -10 punktus.</p>
            <p>Jo vairāk vārdu izdosies salikt 120 sekunžu laikā, jo vairāk punktus iegūsiet!</p>
-           <p>Visi vārdi ir saistīti ar tēmu "Ziemassvētki".</p>
+           
         </div>
         <!--Spēles bloks-->
         <div class="content">
@@ -51,7 +51,7 @@
                 <h5 class="no"></h4>
                     <h3 class="zinojums"></h3>
                     <input type="text" class="hidden" placeholder="Ievadi atbildi"><br>
-                    <button class="poga" onclick="countdown()">Sākt spēli</button>
+                    <button class="poga" id="poga" >Sākt spēli</button>
                    
                     <div class="punkti"><label id='punkti'><b>Punkti:</b></label></div>
                     <div class="laiks"><label id='laiks'><b>Laiks:<div id="some_div">
@@ -93,6 +93,24 @@
             <!--Rezultātu bloks-->
             <div class="rezultati" id="rezultati">
                 <h2>Rezultāti</h2>
+                <div id="tabula"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td> Nr.</td>
+                            <td> Vārds</td>
+                            <td>Rezultāts</td>
+                        </tr>
+                    </thead>
+                    <tbody class="rindas">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
             
 
                 <p id="demo"></p>
