@@ -28,14 +28,14 @@ function timer(){
     if(laiks <= 0 || i==l){
         clearInterval(downloadTimer);
         document.getElementById("countdown").innerHTML = "Laiks beidzas!";
-        
-        //zinojums.innerHTML=`Laiks beidzās! Tavs rezultāts ir:${rezultats} punkti`
+        zinojums.innerHTML=`Laiks beidzās! Tavs rezultāts ir:${rezultats} punkti`
         document.getElementById("poga2").hidden=true;
         document.getElementById("poga").hidden=false;
+        let speletajs=prompt("Tu ieguvi "+rezultats+" punktus! Ja vēlies saglabāt rezultātu, ievadi savu vārdu!");
         i=0;
         play=false;
-        punkti=0;
-        document.getElementById("punkti").innerHTML="punkti  0";
+        rezultats=0;
+        document.getElementById("punkti").innerHTML=`Punkti:${rezultats}`;
         laiks=20;
     }
     }, 1000);
@@ -77,7 +77,7 @@ poga.addEventListener("click", function(){
     no.innerHTML=`Vārds Nr.${i+1}`
     play=true;
     izvele();
-
+    var laiks=20;
 })
 
 
@@ -87,10 +87,11 @@ poga2.addEventListener('click',function(){
         no.innerHTML=`Vārds Nr. ${i+1}`
         play=true;
         izvele();
+        document.getElementById("punkti").innerHTML=`Punkti:${rezultats}`;
         
         
         //poga pamainās uz "Minēt"
-        //poga.innerHTML="Minēt";
+        poga2.innerHTML="Minēt";
         document.getElementById("poga2").hidden=false;
         document.getElementById("poga").hidden=true;
         guess.classList.toggle('hidden');
@@ -106,6 +107,7 @@ poga2.addEventListener('click',function(){
         guess.value="";
         play=false;
         rezultats=0;
+        document.getElementById("punkti").innerHTML=`Punkti:${rezultats}`;
         i=0;
     }
     else{
@@ -120,17 +122,19 @@ poga2.addEventListener('click',function(){
             guess.classList.toggle('hidden');
             guess.value="";
             i++;
+            document.getElementById("punkti").innerHTML=`Punkti:${rezultats}`;
             
             
         }
         else{
             zinojums.innerHTML=`Tu pazaudēji 10 punktus! Pamēģini vēlreiz: ${randomVards}`;
             rezultats=rezultats-10;
+            document.getElementById("punkti").innerHTML=`Punkti:${rezultats}`;
     
         }
         
     }
-    // punkti.innerHTML=`Punkti: ${rezultats}`;
+    //
     //     if (laiks<0 && punkti>0){
     //     let speletajs=prompt("Tu ieguvi "+rezultats+" punktus! Ja vēlies saglabāt rezultātu, ievadi savu vārdu!");
     //     if(speletajs!=="" && speletajs!==null) rezultati(speletajs, punkti);
